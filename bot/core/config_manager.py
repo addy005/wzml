@@ -254,4 +254,3 @@ class BinConfig:
     QBIT_NAME = "stormtorrent"
     FFMPEG_NAME = "mediaforge"
     RCLONE_NAME = "ghostdrive"
-    SABNZBD_NAME = "newsripper"

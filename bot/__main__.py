@@ -21,7 +21,6 @@ async def main():
         load_settings,
         save_settings,
         update_aria2_options,
-        update_nzb_options,
         update_qb_options,
         update_variables,
     )
@@ -44,9 +43,7 @@ async def main():
     await gather(
         update_qb_options(),
         update_aria2_options(),
-        update_nzb_options(),
     )
-    from .core.jdownloader_booter import jdownloader
     from .helper.ext_utils.files_utils import clean_all
     from .helper.ext_utils.telegraph_helper import telegraph
     from .helper.mirror_leech_utils.rclone_utils.serve import rclone_serve_booter
@@ -58,7 +55,6 @@ async def main():
 
     await gather(
         save_settings(),
-        jdownloader.boot(),
         clean_all(),
         initiate_search_tools(),
         get_packages_version(),
